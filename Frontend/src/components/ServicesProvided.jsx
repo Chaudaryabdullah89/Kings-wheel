@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react'
 import image from '../assets/service-1.avif'
 import image2 from '../assets/service-2.avif'
-<<<<<<< HEAD
-import service2 from '../assets/service-2.avif'
-=======
->>>>>>> origin/main
 import image3 from '../assets/service 3.avif'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -40,11 +36,7 @@ const ServicesProvided = () => {
                 </div>
             </div>
             <div className='bg-cover bg-center h-96 rounded-lg relative overflow-hidden rounded-xl transform hover:scale-[0.98] transition-all cursor-pointer' data-aos="flip-right" data-aos-duration="1500">
-<<<<<<< HEAD
-                <img src={service2} alt="service-2" className='w-full item-center center bg-center absolute top-0 left-0 h-full object-cover rounded-lg inset-0 hover:scale-105 transition duration-700 ' />    
-=======
-                <img src='https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/Car-Stops-TWO.jpeg' alt="service-2" className='w-full item-center center bg-center absolute top-0 left-0 h-full object-cover rounded-lg inset-0 hover:scale-105 transition duration-700 ' />    
->>>>>>> origin/main
+                <img src={image2} alt="service-2" className='w-full item-center center bg-center absolute top-0 left-0 h-full object-cover rounded-lg inset-0 hover:scale-105 transition duration-700 ' />    
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex items-end">
                   <div className="text-white" data-aos="fade-up" data-aos-delay="200">
                     <h3 className="text-3xl font-bold mb-2 text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Parking Lot Maintenance Crews
