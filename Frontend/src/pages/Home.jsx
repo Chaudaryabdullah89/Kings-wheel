@@ -8,18 +8,19 @@ import Purpose from '../components/purpose'
 import ServicesProvided from '../components/ServicesProvided'
 import Testonomies from '../components/Testonomies'
 import KingDiffrence from '../components/KingDiffrence'
+
   const Home = () => {
   return (
     <div>
         <Navbar />
         <Hero />
         <WhyChoseUs />
-        {/* <Next /> */}
         <Reason />
         <Purpose />
         <ServicesProvided />
         <Testonomies />
         <KingDiffrence />
+        <Next />
     </div>
   )
 }

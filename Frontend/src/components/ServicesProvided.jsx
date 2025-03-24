@@ -61,7 +61,7 @@ Commercial & Industrial Property Owners
        </div>
        </div>
         </div>
-      <div className="grid md:grid-cols-3 mt-10 gap-12 text-center">
+      {/* <div className="grid md:grid-cols-3 mt-10 gap-12 text-center">
       <div className="p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
         <div className="text-blue-400 text-5xl mb-6">◬</div>
         <h3 className="text-2xl font-bold text-white mb-4">Clean Geometry</h3>
@@ -79,7 +79,7 @@ Commercial & Industrial Property Owners
         <h3 className="text-2xl font-bold text-white mb-4">Decade Durability</h3>
         <p className="text-gray-300">Weather-resistant construction built to last</p>
       </div>
-    </div>
+    </div> */}
       </div>
     </div>
   )

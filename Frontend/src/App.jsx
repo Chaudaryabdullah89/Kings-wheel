@@ -7,7 +7,7 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import Footer from './components/footer'
 function App() {
   useEffect(() => {
     AOS.init({
@@ -28,6 +28,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }

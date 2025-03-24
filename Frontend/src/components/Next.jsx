@@ -1,138 +1,64 @@
-import React, { useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import React from "react";
+import { Link } from "react-router-dom";
 
-// CSS Styles (could also be in a separate CSS file)
-const styles = `
-.bounding {
-    width: fit-content;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Zoom Animations */
-.boundingZoomIn .boundingelem {
-    transform: scale(0);
-    opacity: 0;
-    visibility: hidden;
-}
-.boundingZoomOut .boundingelem {
-    transform: scale(2);
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* Fade Animations */
-.boundingFadeLeft .boundingelem {
-    transform: translateX(100%);
-    opacity: 0;
-    visibility: hidden;
-}
-.boundingFadeRight .boundingelem {
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-}
-`;
-
-const GsapAnimation = ({ children, animationType }) => {
-  const containerRef = useRef(null);
-  
-  useEffect(() => {
-    const elements = containerRef.current.querySelectorAll('.boundingelem');
-    
-    // Reset elements to initial state
-    gsap.set(elements, {
-      ...getInitialState(animationType),
-      visibility: 'visible'
-    });
-
-    // Create animation
-    gsap.to(elements, {
-      ...getAnimationProperties(animationType),
-      ease: "power3.out",
-      duration: 1,
-      stagger: 0.2,
-      opacity: 1,
-      visibility: 'visible',
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top center+=100",
-        toggleActions: "play none none reverse"
-      }
-    });
-    
-    return () => {
-      // Cleanup animations
-      gsap.killTweensOf(elements);
-    };
-  }, [animationType]);
-
-  const getInitialState = (type) => {
-    switch(type) {
-      case 'zoomIn':
-        return { scale: 0, opacity: 0 };
-      case 'zoomOut':
-        return { scale: 2, opacity: 0 };
-      case 'fadeLeft':
-        return { x: 100, opacity: 0 };
-      case 'fadeRight':
-        return { x: -100, opacity: 0 };
-      default:
-        return { y: 50, opacity: 0 };
-    }
-  };
-
-  const getAnimationProperties = (type) => {
-    switch(type) {
-      case 'zoomIn':
-      case 'zoomOut':
-        return { scale: 1 };
-      case 'fadeLeft':
-      case 'fadeRight':
-        return { x: 0 };
-      default:
-        return { y: 0 };
-    }
-  };
-
-  return (
-    <>
-      <style>{styles}</style>
-      <div 
-        ref={containerRef} 
-        className={`bounding bounding${animationType}`}
-      >
-        {React.Children.map(children, (child) => (
-          <div className="boundingelem">
-            {child}
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
-
-// Usage Example
 const Next = () => {
   return (
-    <div className="space-y-8 p-8">
-      <GsapAnimation animationType="zoomIn">
-        <div className="text-2xl font-bold">Zoom In Element 1</div>
-        <div className="text-2xl font-bold">Zoom In Element 2</div>
-      </GsapAnimation>
+    <section className="bg-gray-100 my-20 py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Main heading */}
+        <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent heading  pb-4">
+          Ready for wheel stops that work as hard as you do?
+        </h2>
 
-      <GsapAnimation animationType="fadeLeft">
-        <div className="text-2xl font-bold">Fade Left Element</div>
-      </GsapAnimation>
+        {/* Subheading */}
+        <p className="text-lg md:text-xl text-blue-900 font-semibold mb-8">
+          Let's build it right the first time—together.
+        </p>
 
-      <GsapAnimation animationType="fadeRight">
-        <div className="text-2xl font-bold">Fade Right Element</div>
-      </GsapAnimation>
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors duration-300"
+          >
+            Get a Quote
+            <svg
+              className="ml-2 w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </Link>
 
-      <GsapAnimation animationType="zoomOut">
-        <div className="text-2xl font-bold">Zoom Out Element</div>
-      </GsapAnimation>
-    </div>
+          <Link
+            to="/gallery"
+            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+          >
+            View Gallery
+            <svg
+              className="ml-2 w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 
