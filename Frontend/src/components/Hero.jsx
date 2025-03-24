@@ -4,8 +4,9 @@ import Button from './Button'
 import heroImg from '../assets/imagecompressor/hero img-min.jpg'
 
 const heroImage = {
-  width: '600px',
-  height: '400px'
+  width: 800,
+  height: 400,
+  aspectRatio: '800/400'
 };
 
 const Hero = memo(() => {
@@ -50,24 +51,33 @@ const Hero = memo(() => {
             </div>
         </div>
 
-        <div className='hero-image relative' 
+        <div className='hero-image relative w-full lg:w-[50%]' 
              data-aos="flip-left"
              data-aos-anchor-placement="top-bottom"
              data-aos-duration="1500">
             <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur opacity-20"></div>
-            <img 
-              src={heroImg}
-              alt="King Wheel Stop Installation"
-              width={heroImage.width}
-              height={heroImage.height}
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-              className='relative w-full max-w-[600px] rounded-2xl shadow-2xl hover:transform hover:scale-105 transition-all duration-500' />
-            <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded-lg text-sm"
-                 data-aos="fade-up"
-                 data-aos-anchor-placement="top-bottom">
-              Featured Installation
+            <div 
+              className="relative w-full"
+              style={{
+                aspectRatio: heroImage.aspectRatio,
+                maxWidth: heroImage.width + 'px'
+              }}
+            >
+              <img 
+                src={heroImg}
+                alt="King Wheel Stop Installation"
+                width={heroImage.width}
+                height={heroImage.height}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                className='absolute inset-0 w-full h-full object-cover rounded-2xl shadow-2xl hover:transform hover:scale-105 transition-all duration-500'
+              />
+              <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded-lg text-sm"
+                   data-aos="fade-up"
+                   data-aos-anchor-placement="top-bottom">
+                Featured Installation
+              </div>
             </div>
         </div>
       </div>
