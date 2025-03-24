@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <>
-      {/* <Preloader /> */}
+      <Preloader />
       <div className="min-h-screen">
         <Navbar />
         <main className="pt-20">

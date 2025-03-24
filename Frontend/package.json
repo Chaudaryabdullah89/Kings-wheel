@@ -12,6 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",
+    "framer-motion": "^12.5.0",
     "git": "^0.1.5",
     "github": "^14.0.0",
     "gsap": "^3.12.7",
