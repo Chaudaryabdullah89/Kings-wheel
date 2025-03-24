@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+<<<<<<< HEAD
 import performance from '../assets/performance.jpeg'
+=======
+
+>>>>>>> origin/main
 const Reason = () => {
   useEffect(() => {
     AOS.init({
@@ -87,7 +91,11 @@ const Reason = () => {
           <div>
             <img
               className="w-full h-[300px] lg:h-[400px] object-cover transform hover:scale-105 transition duration-700 rounded-lg border-2 border-yellow-500"
+<<<<<<< HEAD
               src={performance}
+=======
+              src="https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/empty-parking-spaces-blocks-white-260nw-1801178686-e1742560693633.webp"
+>>>>>>> origin/main
               alt=""
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"

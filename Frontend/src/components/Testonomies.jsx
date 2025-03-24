@@ -6,53 +6,81 @@ import 'aos/dist/aos.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+<<<<<<< HEAD
 import t1 from '../assets/T1.avif'
 import t2 from '../assets/T2.avif'
 import t3 from '../assets/T3.avif'
 import t4 from '../assets/T4.avif'
 import t5 from '../assets/T5.avif'
 import t6 from '../assets/T6.avif'
+=======
+
+>>>>>>> origin/main
 const testimonials = [
   {
     name: "John Smith",
     role: "Property Manager", 
     company: "Premier Properties",
+<<<<<<< HEAD
 image : t1,
+=======
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+>>>>>>> origin/main
     content: "King Wheel Stops has transformed our parking lots. Their products are durable, easy to install, and look professional. The customer service is exceptional!"
   },
   {
     name: "Sarah Johnson",
     role: "Construction Manager",
     company: "BuildRight Construction",
+<<<<<<< HEAD
     image: t2,
+=======
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+>>>>>>> origin/main
     content: "We've used King Wheel Stops on multiple projects. Their concrete stops are superior quality and the installation process is smooth. Highly recommended!"
   },
   {
     name: "Michael Chen",
     role: "Facility Director",
     company: "Corporate Complex",
+<<<<<<< HEAD
     image: t3,
+=======
+    image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+>>>>>>> origin/main
     content: "The durability of King Wheel Stops is impressive. After years of use, they still look as good as new. Their products are a long-term investment worth making."
   },
   {
     name: "David Rodriguez",
     role: "Parking Operations Manager",
     company: "Urban Parking Solutions",
+<<<<<<< HEAD
     image: t4,
+=======
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+>>>>>>> origin/main
     content: "The installation team's expertise and attention to detail is unmatched. They completed our large parking lot project ahead of schedule with perfect precision."
   },
   {
     name: "Emily Thompson",
     role: "Commercial Property Owner",
     company: "Thompson Real Estate",
+<<<<<<< HEAD
     image: t5,
+=======
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+>>>>>>> origin/main
     content: "King Wheel Stops has been our go-to supplier for years. Their products are consistently high quality and their customer support is outstanding."
   },
   {
     name: "Robert Wilson",
     role: "Project Manager",
     company: "Wilson Construction Co.",
+<<<<<<< HEAD
     image: t6,
+=======
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+>>>>>>> origin/main
     content: "The concrete quality and reinforcement in their wheel stops is superior. They withstand heavy traffic and weather conditions without any issues."
   }
 ];

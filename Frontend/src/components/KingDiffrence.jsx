@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+<<<<<<< HEAD
 import before1 from '../assets/Diff1.jpg'
 import before2 from '../assets/Diff2.jpg'
 const beforeAfterData = [
@@ -18,6 +19,24 @@ const beforeAfterData = [
     id: 3,
     beforeImage: before1,
     afterImage: before2,
+=======
+
+const beforeAfterData = [
+  {
+    id: 1,
+    beforeImage: "https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/qTWcZNGYqvHVUGj-1600x900-noPad.jpg",
+    afterImage: "https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/large_Car-and-Truck-Stops-6.jpg",
+  },
+  {
+    id: 2,
+    beforeImage: "https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/qTWcZNGYqvHVUGj-1600x900-noPad.jpg",
+    afterImage: "https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/large_Car-and-Truck-Stops-6.jpg",
+  },
+  {
+    id: 3,
+    beforeImage: "https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/qTWcZNGYqvHVUGj-1600x900-noPad.jpg",
+    afterImage: "https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/large_Car-and-Truck-Stops-6.jpg",
+>>>>>>> origin/main
   }
 ];
 
