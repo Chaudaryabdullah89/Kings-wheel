@@ -15,10 +15,9 @@ const Navbar = () => {
       easing: 'ease-out'
     });
   }, []);
-<<<<<<< HEAD
-console.log(menu);
-=======
->>>>>>> origin/main
+
+
+
 
   return (
     <div className="max-w-7xl mx-auto">
