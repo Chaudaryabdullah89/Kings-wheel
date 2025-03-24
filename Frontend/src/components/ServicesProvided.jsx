@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import image from '../assets/service-1.avif'
-import image2 from '../assets/service-2.avif'
-import image3 from '../assets/service 3.avif'
+import image from '../assets/service-1.jpg'
+import image2 from '../assets/service-2.jpg'
+import image3 from '../assets/service 3.jpg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
