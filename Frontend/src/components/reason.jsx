@@ -88,8 +88,7 @@ const Reason = () => {
           <div>
             <img
               className="w-full h-[300px] lg:h-[400px] object-cover transform hover:scale-105 transition duration-700 rounded-lg border-2 border-yellow-500"
-              src={performance}
-              src="https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/empty-parking-spaces-blocks-white-260nw-1801178686-e1742560693633.webp"
+              src=  {performance}
               alt=""
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
