@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import before1 from '../assets/Diff1.jpg'
-import before2 from '../assets/Diff2.jpg'
+import before2 from '../assets/diff2.jpg'
 const beforeAfterData = [
   {
     id: 1,
