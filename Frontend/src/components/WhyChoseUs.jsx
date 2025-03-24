@@ -3,7 +3,7 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import whyChooseUs from '../assets/chose.jpg'
 const WhyChoseUs = () => {
   useEffect(() => {
     AOS.init({
@@ -25,7 +25,7 @@ const WhyChoseUs = () => {
            
             <div className="relative" data-aos="flip-left" data-aos-duration="1500">
                 <div className="gradient-border rounded-xl overflow-hidden">
-                    <img src='https://kingwheelstop.bloggeroceans.com/wp-content/uploads/2025/03/empty-parking-spaces-blocks-white-260nw-1801178686-e1742560693633.webp' 
+                    <img src={whyChooseUs} 
                          alt="Durable Installation" 
                          className="w-full h-[300px] lg:h-[500px] object-cover transform hover:scale-105 transition duration-700"></img>
                 </div>
