@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <nav className="navbar backdrop-blur-sm border-b border-gray-100 py-5 flex justify-between gap-0 items-center fixed top-0 left-0 w-full z-10">
+      <nav className="navbar backdrop-blur-sm border-b border-gray-100 py-5 flex justify-between gap-0 items-center fixed top-0 left-0 w-full md:w-full z-10">
         <div className="nav-brand flex items-center gap-4 mx-12 lg:mx-16 flex-row" data-aos="fade-right">
           <Link to="/" className="flex items-center gap-2">
             <img
@@ -63,15 +63,15 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-          <div className="flex items-center gap-4">
+       
             
-            <div className="sm:hidden mx-12 lg:mx-16 flex justify-between">
+            <div className="sm:hidden  lg:mx-16 ">
               <i
                 onClick={() => setMenu(!menu)}
                 className="fa-solid fa-bars cursor-pointer text-yellow-500 text-2xl"
               ></i>
             </div>
-          </div>
+         
       </nav>
       {/* mobile nav bar */}
       <div

@@ -50,11 +50,13 @@ const Preloader = () => {
   if (!loading) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="w-full max-w-md p-8">
         {/* Logo Container */}
         <div className="flex justify-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse"></div>
+          <div className="">
+            <img src="https://cdn-icons-png.flaticon.com/512/199/199060.png" alt=""  className='w-16 h-16' />
+          </div>
         </div>
 
         {/* Brand Name */}
