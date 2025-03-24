@@ -63,7 +63,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center sm:hidden gap-4 mx-12 lg:mx-16 flex-row" data-aos="fade-left">
+        <div className="flex items-center sm:hidden ">
           <i
             onClick={() => setMenu(!menu)}
             className="fa-solid fa-bars cursor-pointer text-yellow-500 text-2xl"
@@ -73,55 +73,82 @@ const Navbar = () => {
       {/* mobile nav bar */}
       <div
         className={`fixed top-0 right-0 bottom-0 transition-all duration-300 h-screen bg-white z-20 ${
-          menu ? "w-full" : "w-0"
-        } overflow-hidden`}
+          menu ? "w-[300px]" : "w-0" 
+        } overflow-hidden shadow-2xl`}
       >
-        <div className="flex gap-2 items-center" data-aos="fade-down">
-          <i
-            className="fa-solid fa-arrow-left text-xl text-yellow-600 hover:text-yellow-600 cursor-pointer p-4"
+        <div className="flex justify-between items-center p-4 border-b border-gray-100" data-aos="fade-down">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/199/199060.png" 
+              alt="Logo"
+              className="w-8 h-8"
+            />
+            <h2 className="text-lg font-bold text-blue-900">
+              King Wheel Stop
+            </h2>
+          </div>
+          <button
             onClick={() => setMenu(false)}
-          ></i>
-          <p
-            onClick={() => setMenu(false)}
-            className="cursor-pointer -ml-4 text-lg font-bold text-yellow-500 pb-1 hover:text-yellow-600"
+            className="text-gray-500 hover:text-gray-700"
           >
-            Back
-          </p>
+            <i className="fa-solid fa-xmark text-xl"></i>
+          </button>
         </div>
-        <div className="flex flex-col gap-4">
-          <ul className="flex flex-col gap-4 justify-start items-start mx-8 mt-5">
+
+        <nav className="p-4">
+          <ul className="flex flex-col gap-2">
             <li data-aos="fade-right" data-aos-delay="100">
-              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/" onClick={()=>{setMenu(false)}}>
+              <Link 
+                className="flex items-center gap-2 p-3 rounded-lg text-blue-900 font-semibold hover:bg-blue-50 transition-all duration-300" 
+                to="/" 
+                onClick={() => setMenu(false)}
+              >
+                <i className="fa-solid fa-home w-5"></i>
                 Home
               </Link>
             </li>
-            <hr className="w-full border-gray-300" />
             <li data-aos="fade-right" data-aos-delay="200">
-              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/about" onClick={()=>{setMenu(false)}}>
+              <Link 
+                className="flex items-center gap-2 p-3 rounded-lg text-blue-900 font-semibold hover:bg-blue-50 transition-all duration-300" 
+                to="/about"
+                onClick={() => setMenu(false)}
+              >
+                <i className="fa-solid fa-info-circle w-5"></i>
                 About
               </Link>
             </li>
-            <hr className="w-full border-gray-300" />
             <li data-aos="fade-right" data-aos-delay="300">
-              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/services" onClick={()=>{setMenu(false)}}>
+              <Link 
+                className="flex items-center gap-2 p-3 rounded-lg text-blue-900 font-semibold hover:bg-blue-50 transition-all duration-300" 
+                to="/services"
+                onClick={() => setMenu(false)}
+              >
+                <i className="fa-solid fa-cog w-5"></i>
                 Services
               </Link>
             </li>
-            <hr className="w-full border-gray-300" />
             <li data-aos="fade-right" data-aos-delay="400">
-              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/contact" onClick={()=>{setMenu(false)}}>
-                Industries Servied
+              <Link 
+                className="flex items-center gap-2 p-3 rounded-lg text-blue-900 font-semibold hover:bg-blue-50 transition-all duration-300" 
+                to="/contact"
+                onClick={() => setMenu(false)}
+              >
+                <i className="fa-solid fa-industry w-5"></i>
+                Industries Served
               </Link>
             </li>
-            <hr className="w-full border-gray-300" />
             <li data-aos="fade-right" data-aos-delay="500">
-              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/contact" onClick={()=>{setMenu(false)}}>
+              <Link 
+                className="flex items-center gap-2 p-3 mt-2 rounded-lg bg-blue-900 text-white font-semibold hover:bg-blue-800 transition-all duration-300" 
+                to="/contact"
+                onClick={() => setMenu(false)}
+              >
+                <i className="fa-solid fa-phone w-5"></i>
                 Contact Now
               </Link>
             </li>
-            <hr className="w-full border-gray-300" />
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   );

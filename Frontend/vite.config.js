@@ -1,7 +1,34 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    visualizer({
+      open: true,
+      gzipSize: true
+    })
+  ],
+  build: {
+    target: 'es2015',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'aos': ['aos'],
+        }
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
+  }
+});

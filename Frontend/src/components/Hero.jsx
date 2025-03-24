@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react'
-import heroImage from '../assets/hero img.jpg'
+import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
-import AOS from 'aos'
 
-const Hero = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-out',
-      startEvent: 'load' // Initialize on page load instead of scroll
-    });
-  }, []);
+const heroImage = {
+  src: '../assets/imagecompressor/hero img.jpg',
+  width: '600px',
+  height: '400px'
+};
 
+const Hero = memo(() => {
   return (
     <div className='my-36 max-w-[1400px] mx-auto px-4 md:px-8 gap-5 lg:px-16'>
       <div className="hero-container flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -60,9 +55,15 @@ const Hero = () => {
              data-aos-anchor-placement="top-bottom"
              data-aos-duration="1500">
             <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur opacity-20"></div>
-            <img src={heroImage} 
-                 alt="King Wheel Stop Installation" 
-                 className='relative w-full max-w-[600px] rounded-2xl shadow-2xl hover:transform hover:scale-105 transition-all duration-500' />
+            <img 
+              src='../assets/imagecompressor/hero img.jpg'
+              alt="King Wheel Stop Installation"
+              width={heroImage.width}
+              height={heroImage.height}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              className='relative w-full max-w-[600px] rounded-2xl shadow-2xl hover:transform hover:scale-105 transition-all duration-500' />
             <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded-lg text-sm"
                  data-aos="fade-up"
                  data-aos-anchor-placement="top-bottom">
@@ -72,6 +73,7 @@ const Hero = () => {
       </div>
     </div>
   )
-}
+})
 
+Hero.displayName = 'Hero'
 export default Hero
