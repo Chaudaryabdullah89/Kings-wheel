@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -8,7 +10,7 @@ import 'swiper/css/pagination';
 const testimonials = [
   {
     name: "John Smith",
-    role: "Property Manager",
+    role: "Property Manager", 
     company: "Premier Properties",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     content: "King Wheel Stops has transformed our parking lots. Their products are durable, easy to install, and look professional. The customer service is exceptional!"
@@ -51,17 +53,26 @@ const testimonials = [
 ];
 
 const Testonomies = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out',
+      anchorPlacement: 'top-bottom'
+    });
+  }, []);
+
   return (
     <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" data-aos="fade-left"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" data-aos="fade-right"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000" data-aos="zoom-in"></div>
       </div>
 
       <div className="max-w-7xl py-16 mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-down">
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
             What Our Clients Say
           </h2>
@@ -104,12 +115,12 @@ const Testonomies = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white z-10 rounded-2xl cursor-pointer shadow-xl p-8 h-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
+              <div className="bg-white z-10 rounded-2xl cursor-pointer shadow-xl p-8 h-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden group" data-aos="flip-left" data-aos-delay={index * 100}>
                 {/* Decorative gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 to-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative">
-                  <div className="flex items-center mb-6">
+                  <div className="flex items-center mb-6" data-aos="fade-right" data-aos-delay={index * 150}>
                     <div className="relative">
                       <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur opacity-25 group-hover:opacity-50 transition-opacity duration-300"></div>
                       <img
@@ -127,7 +138,7 @@ const Testonomies = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="relative">
+                  <div className="relative" data-aos="zoom-in" data-aos-delay={index * 200}>
                     <svg
                       className="absolute -top-4 -left-4 h-8 w-8 text-orange-400 transform -rotate-12"
                       fill="currentColor"
@@ -147,10 +158,10 @@ const Testonomies = () => {
         </Swiper>
 
         {/* Custom navigation buttons */}
-        <div className="flex justify-center mt-12 space-x-4">
+        <div className="flex justify-center mt-12 space-x-4" data-aos="fade-up">
          
-        </div>
-      </div>
+</div>
+    </div>
     </section>
   );
 };

@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const beforeAfterData = [
   {
@@ -18,13 +20,17 @@ const beforeAfterData = [
   }
 ];
 
-
-//  slider code is taken for the internet and modified for the project
-
-
 const BeforeAfterSlider = () => {
   const [activeSliders, setActiveSliders] = useState({});
   const sliderRefs = useRef({});
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: false
+    });
+  }, []);
 
   const handleMove = (clientX, id) => {
     if (!activeSliders[id]) return;
@@ -72,15 +78,20 @@ const BeforeAfterSlider = () => {
 
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-      <div className='max-w-[1400px] mx-auto px-4 md:px-8 gap-5 lg:px-16 mb-12 lg:text-center '>
-      <h1 className='text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent heading leading-tight' >
-      See the King Difference</h1>
-      <p className='text-blue-900 font-semibold pt-2 '>From custom pour to polished install—this is what quality looks like.</p>
+      <div className='max-w-[1400px] mx-auto px-4 md:px-8 gap-5 lg:px-16 mb-12 lg:text-center' data-aos="fade-down">
+        <h1 className='text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent heading leading-tight'>
+          See the King Difference
+        </h1>
+        <p className='text-blue-900 font-semibold pt-2' data-aos="fade-up" data-aos-delay="200">
+          From custom pour to polished install—this is what quality looks like.
+        </p>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {beforeAfterData.map(({ id, beforeImage, afterImage }) => (
-            <div key={id} className="max-w-4xl mx-auto w-full h-1/2">
+            <div key={id} className="max-w-4xl mx-auto w-full h-1/2" 
+              data-aos={id % 2 === 0 ? "flip-left" : "flip-right"}
+              data-aos-delay={id * 100}>
               <div 
                 ref={el => sliderRefs.current[`container-${id}`] = el}
                 className="relative h-[400px] sm:h-[270px] rounded-2xl overflow-hidden shadow-2xl group"

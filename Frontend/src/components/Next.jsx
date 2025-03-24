@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Next = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out',
+      anchorPlacement: 'top-bottom'
+    });
+  }, []);
+
   return (
     <section className="bg-gray-100 my-20 py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main heading */}
-        <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent heading  pb-4">
+        <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent heading pb-4"
+            data-aos="fade-down"
+            data-aos-duration="1200">
           Ready for wheel stops that work as hard as you do?
         </h2>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-blue-900 font-semibold mb-8">
+        <p className="text-lg md:text-xl text-blue-900 font-semibold mb-8"
+           data-aos="fade-up" 
+           data-aos-delay="200">
           Let's build it right the first time—together.
         </p>
 
@@ -20,6 +35,8 @@ const Next = () => {
           <Link
             to="/contact"
             className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors duration-300"
+            data-aos="flip-left"
+            data-aos-delay="400"
           >
             Get a Quote
             <svg
@@ -40,6 +57,8 @@ const Next = () => {
           <Link
             to="/gallery"
             className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+            data-aos="flip-right"
+            data-aos-delay="600"
           >
             View Gallery
             <svg

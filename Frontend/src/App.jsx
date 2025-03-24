@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home'
@@ -8,28 +8,41 @@ import Contact from './pages/Contact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Footer from './components/footer'
-function App() {
+import Preloader from './components/Preloader'
+
+const App = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
+    const initAOS = () => {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+        delay: 0,
+        easing: 'ease-out',
+        disableInMobile: true
+      });
+    };
+
+    document.addEventListener('preloaderDone', initAOS);
+    return () => document.removeEventListener('preloaderDone', initAOS);
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main className="pt-20">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <>
+      {/* <Preloader /> */}
+      <div className="min-h-screen">
+        <Navbar />
+        <main className="pt-20">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
 

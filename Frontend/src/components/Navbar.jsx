@@ -1,55 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 import Buttonnav from "./Buttonnav";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out'
+    });
+  }, []);
+
   return (
-    <div className=" max-w-7xl mx-auto  " >
-      <nav className="navbar  backdrop-blur-sm border-b border-gray-100 py-5 flex justify-between gap-0 items-center fixed top-0 left-0 w-full z-10">
-        <div className="nav-brand flex items-center gap-4 mx-12 lg:mx-16 flex-row ">
+    <div className="max-w-7xl mx-auto">
+      <nav className="navbar backdrop-blur-sm border-b border-gray-100 py-5 flex justify-between gap-0 items-center fixed top-0 left-0 w-full z-10">
+        <div className="nav-brand flex items-center gap-4 mx-12 lg:mx-16 flex-row" data-aos="fade-right">
           <Link to="/" className="flex items-center gap-2">
             <img
               src="https://cdn-icons-png.flaticon.com/512/199/199060.png"
               alt="Logo"
               className="w-12 h-12"
-            />{" "}
+            />
           </Link>
-          <h2 className="text-2xl font-bold text-blue-900 pb-1 hidden lg:block  ">
-            King Wheel Stop{" "}
+          <h2 className="text-2xl font-bold text-blue-900 pb-1 hidden lg:block">
+            King Wheel Stop
           </h2>
         </div>
-        <div className="hidden sm:flex">
+        <div className="hidden sm:flex" data-aos="fade-down">
           <ul className="nav-links roboto flex items-center gap-10 mx-5 xl:mx-24 lg:mx-12">
-            <li>
-              <Link className="text-blue-900  font-semibold  " to="/">
+            <li data-aos="fade-down" data-aos-delay="100">
+              <Link className="text-blue-900 font-semibold" to="/">
                 Home
               </Link>
             </li>
-            <li>
-              <Link className="text-blue-900  font-semibold  " to="/about">
+            <li data-aos="fade-down" data-aos-delay="200">
+              <Link className="text-blue-900 font-semibold" to="/about">
                 About
               </Link>
             </li>
-            <li>
-              <Link className="text-blue-900  font-semibold  " to="/services">
+            <li data-aos="fade-down" data-aos-delay="300">
+              <Link className="text-blue-900 font-semibold" to="/services">
                 Services
               </Link>
             </li>
-            <li>
-              <Link className="text-blue-900  font-semibold  " to="/contact">
+            <li data-aos="fade-down" data-aos-delay="400">
+              <Link className="text-blue-900 font-semibold" to="/contact">
                 Industries Servied
               </Link>
             </li>
-            <li>
-              <Link className="text-blue-900   font-semibold  " to="/contact">
-                <Buttonnav   value=" Contact Now  " />
+            <li data-aos="fade-down" data-aos-delay="500">
+              <Link className="text-blue-900 font-semibold" to="/contact">
+                <Buttonnav value=" Contact Now  " />
               </Link>
             </li>
           </ul>
         </div>
-        <div className="flex items-center sm:hidden gap-4 mx-12 lg:mx-16 flex-row">
+        <div className="flex items-center sm:hidden gap-4 mx-12 lg:mx-16 flex-row" data-aos="fade-left">
           <i
             onClick={() => setMenu(!menu)}
             className="fa-solid fa-bars cursor-pointer text-yellow-500 text-2xl"
@@ -62,7 +73,7 @@ const Navbar = () => {
           menu ? "w-full" : "w-0"
         } overflow-hidden`}
       >
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center" data-aos="fade-down">
           <i
             className="fa-solid fa-arrow-left text-xl text-yellow-600 hover:text-yellow-600 cursor-pointer p-4"
             onClick={() => setMenu(false)}
@@ -74,39 +85,38 @@ const Navbar = () => {
             Back
           </p>
         </div>
-        <div className="flex flex-col gap-4 ">
-          <ul className="flex flex-col gap-4 justify-start items-start mx-8 mt-5 ">
-            <li>
-              <Link className="text-blue-900  font-semibold  transition-all duration-300 " to="/" onClick={()=>{setMenu(false)}} >
+        <div className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 justify-start items-start mx-8 mt-5">
+            <li data-aos="fade-right" data-aos-delay="100">
+              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/" onClick={()=>{setMenu(false)}}>
                 Home
               </Link>
             </li>
             <hr className="w-full border-gray-300" />
-            <li>
-              <Link className="text-blue-900  font-semibold transition-all duration-300  " to="/about" onClick={()=>{setMenu(false)}} >
+            <li data-aos="fade-right" data-aos-delay="200">
+              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/about" onClick={()=>{setMenu(false)}}>
                 About
               </Link>
             </li>
             <hr className="w-full border-gray-300" />
-            <li>
-              <Link className="text-blue-900  font-semibold  transition-all duration-300 " to="/services" onClick={()=>{setMenu(false)}} >
+            <li data-aos="fade-right" data-aos-delay="300">
+              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/services" onClick={()=>{setMenu(false)}}>
                 Services
               </Link>
             </li>
             <hr className="w-full border-gray-300" />
-            <li>
-              <Link className="text-blue-900  font-semibold  transition-all duration-300 " to="/contact" onClick={()=>{setMenu(false)}} >
+            <li data-aos="fade-right" data-aos-delay="400">
+              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/contact" onClick={()=>{setMenu(false)}}>
                 Industries Servied
               </Link>
             </li>
             <hr className="w-full border-gray-300" />
-            <li>
-              <Link className="text-blue-900  font-semibold  transition-all duration-300 " to="/contact" onClick={()=>{setMenu(false)}} >
+            <li data-aos="fade-right" data-aos-delay="500">
+              <Link className="text-blue-900 font-semibold transition-all duration-300" to="/contact" onClick={()=>{setMenu(false)}}>
                 Contact Now
               </Link>
-
             </li>
-              <hr className="w-full border-gray-300" />
+            <hr className="w-full border-gray-300" />
           </ul>
         </div>
       </div>
