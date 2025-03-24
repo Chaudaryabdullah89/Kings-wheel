@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import before1 from '../assets/Diff1.jpg'
-import before2 from '../assets/diff2.jpg'
+import before1 from '../assets/imagecompressor/Diff1-min.jpg'
+import before2 from '../assets/imagecompressor/diff2-min.jpg'
 const beforeAfterData = [
   {
     id: 1,

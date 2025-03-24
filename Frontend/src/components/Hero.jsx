@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
+import heroImg from '../assets/imagecompressor/hero img-min.jpg'
 
 const heroImage = {
-  src: '../assets/imagecompressor/hero img.jpg',
   width: '600px',
   height: '400px'
 };
@@ -56,7 +56,7 @@ const Hero = memo(() => {
              data-aos-duration="1500">
             <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur opacity-20"></div>
             <img 
-              src='../assets/imagecompressor/hero img.jpg'
+              src={heroImg}
               alt="King Wheel Stop Installation"
               width={heroImage.width}
               height={heroImage.height}

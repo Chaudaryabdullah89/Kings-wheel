@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import Button from './Button'
 import { Link } from 'react-router-dom'
 import AOS from 'aos'
-import 'aos/dist/aos.css'
-import whyChooseUs from '../assets/chose.jpg'
+import 'aos/dist/aos.css'   
+import whyChooseUs from '../assets/imagecompressor/chose-min.jpg'
 
 const WhyChoseUs = () => {
   useEffect(() => {

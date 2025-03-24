@@ -6,12 +6,12 @@ import 'aos/dist/aos.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import t1 from '../assets/T1.jpg'
-import t2 from '../assets/T2.jpg'
-import t3 from '../assets/T3.jpg'
-import t4 from '../assets/T4.jpg'
-import t5 from '../assets/T5.jpg'
-import t6 from '../assets/T6.jpg'
+import t1 from '../assets/imagecompressor/T1-min.jpg'
+import t2 from '../assets/imagecompressor/T2-min.jpg'
+import t3 from '../assets/imagecompressor/T3-min.jpg'
+import t4 from '../assets/imagecompressor/T4-min.jpg'
+import t5 from '../assets/imagecompressor/T5-min.jpg'
+import t6 from '../assets/imagecompressor/T6-min.jpg'
 
 const testimonials = [
   {
