@@ -27,7 +27,7 @@ const Navbar = () => {
             <img
               src="https://cdn-icons-png.flaticon.com/512/199/199060.png"
               alt="Logo"
-              className="w-12 h-12"
+              className="w-12 h-12 "
             />
           </Link>
           <h2 className="text-2xl font-bold text-blue-900 pb-1 hidden lg:block">
@@ -63,17 +63,20 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center sm:hidden ">
-          <i
-            onClick={() => setMenu(!menu)}
-            className="fa-solid fa-bars cursor-pointer text-yellow-500 text-2xl"
-          ></i>
-        </div>
+          <div className="flex items-center gap-4">
+            
+            <div className="sm:hidden mx-12 lg:mx-16 flex justify-between">
+              <i
+                onClick={() => setMenu(!menu)}
+                className="fa-solid fa-bars cursor-pointer text-yellow-500 text-2xl"
+              ></i>
+            </div>
+          </div>
       </nav>
       {/* mobile nav bar */}
       <div
         className={`fixed top-0 right-0 bottom-0 transition-all duration-300 h-screen bg-white z-20 ${
-          menu ? "w-[300px]" : "w-0" 
+          menu ? "w-full" : "w-0" 
         } overflow-hidden shadow-2xl`}
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-100" data-aos="fade-down">
@@ -103,7 +106,7 @@ const Navbar = () => {
                 to="/" 
                 onClick={() => setMenu(false)}
               >
-                <i className="fa-solid fa-home w-5"></i>
+                <i className="fa-solid fa-home w-5 text-yellow-500 "></i>
                 Home
               </Link>
             </li>
@@ -113,7 +116,7 @@ const Navbar = () => {
                 to="/about"
                 onClick={() => setMenu(false)}
               >
-                <i className="fa-solid fa-info-circle w-5"></i>
+                <i className="fa-solid fa-info-circle w-5 text-yellow-500 "></i>
                 About
               </Link>
             </li>
@@ -123,7 +126,7 @@ const Navbar = () => {
                 to="/services"
                 onClick={() => setMenu(false)}
               >
-                <i className="fa-solid fa-cog w-5"></i>
+                <i className="fa-solid fa-cog w-5 text-yellow-500 "></i>
                 Services
               </Link>
             </li>
@@ -133,7 +136,7 @@ const Navbar = () => {
                 to="/contact"
                 onClick={() => setMenu(false)}
               >
-                <i className="fa-solid fa-industry w-5"></i>
+                <i className="fa-solid fa-industry w-5 text-yellow-500 "></i>
                 Industries Served
               </Link>
             </li>
@@ -143,7 +146,7 @@ const Navbar = () => {
                 to="/contact"
                 onClick={() => setMenu(false)}
               >
-                <i className="fa-solid fa-phone w-5"></i>
+                <i className="fa-solid fa-phone w-5 text-yellow-500 "></i>
                 Contact Now
               </Link>
             </li>

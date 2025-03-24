@@ -6,7 +6,7 @@ import heroImg from '../assets/imagecompressor/hero img-min.jpg'
 const heroImage = {
   width: 800,
   height: 400,
-  aspectRatio: '800/400'
+  aspectRatio: '800/500'
 };
 
 const Hero = memo(() => {
