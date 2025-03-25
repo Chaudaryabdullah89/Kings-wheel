@@ -52,7 +52,7 @@ const Preloader = () => {
     };
   }, []);
 
-  // Don't render anything once loading is complete
+  
   if (!loading) return null;
 
   return (

@@ -3,8 +3,8 @@ import service2 from '../assets/imagecompressor/s-2.webp'
 import { Link } from 'react-router-dom'
 const OurStory = () => {
   return (
-    <div className="py-12">
-      <section className="py-20 bg-gray-50">
+    <div className="py-0 md:py-12">
+      <section className="py-0 md:py-20 bg-gray-50">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className=" lg:order-1" data-aos="fade-right">
