@@ -18,10 +18,26 @@ const beforeAfterData = [
     id: 3,
     beforeImage: before1,
     afterImage: before2,
-  }
+  },
+  {
+    id: 4,
+    beforeImage: before1,
+    afterImage: before2,
+  },
+  {
+    id: 5,
+    beforeImage: before1,
+    afterImage: before2,
+  },
+  {
+    id: 6,
+    beforeImage: before1,
+    afterImage: before2,
+  },
+
 ];
 
-const BeforeAfterSlider = () => {
+const BeforeAfterSlider = ({heading}) => {
   const [activeSliders, setActiveSliders] = useState({});
   const sliderRefs = useRef({});
 
@@ -80,10 +96,10 @@ const BeforeAfterSlider = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className='max-w-[1400px] mx-auto px-4 md:px-8 gap-5 lg:px-16 mb-12 lg:text-center' data-aos="fade-down">
-          <h1 className='text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent  leading-tight' style={{font : 'karla'}}>
-          See the King Difference
+          <h1   className='text-4xl lg:text-5xl pb-3 font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent  leading-tight' style={{fontFamily : 'Playfair Display'}}>
+      See the Kings Gallery
         </h1>
-        <p className='text-blue-900 font-semibold pt-2' data-aos="fade-up" data-aos-delay="200" style={{font : 'Poppins'}}>
+        <p className='text-blue-900 font-semibold pt-2' data-aos="fade-up" data-aos-delay="200" style={{fontFamily : 'Poppins'}}>
           From custom pour to polished install—this is what quality looks like.
         </p>
       </div>

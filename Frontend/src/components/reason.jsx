@@ -21,7 +21,7 @@ const Reason = () => {
             <h1 
               className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
               data-aos="fade-right"
-              data-aos-anchor-placement="bottom-bottom"   style={{fontFamily: 'Karla'}}
+              data-aos-anchor-placement="bottom-bottom"   style={{fontFamily: 'Playfair Display'}}
             >
               Engineered to Perform Better
             </h1>
@@ -36,7 +36,7 @@ const Reason = () => {
                   <i className="fa-solid fa-check text-white text-1xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Karla'}}>4000 PSI Concrete Strength</h2>
+                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Playfair Display'}}>4000 PSI Concrete Strength</h2>
                   <p style={{fontFamily: 'Poppins'}} className="text-gray-500" >Built to withstand heavy commercial traffic and extreme weather conditions</p>
                 </div>
               </div>
@@ -51,7 +51,7 @@ const Reason = () => {
                   <i className="fa-solid fa-check text-white text-1xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Karla'}}>#4 Rebar Core Reinforcement</h2>
+                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Playfair Display'}}>#4 Rebar Core Reinforcement</h2>
                   <p style={{fontFamily: 'Poppins'}} className="text-gray-500" >Vertical and horizontal steel reinforcement for maximum load resistance</p>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const Reason = () => {
                   <i className="fa-solid fa-check text-white text-1xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Karla'}}>PVC-Lined Install Holes</h2>
+                    <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Playfair Display'}}>PVC-Lined Install Holes</h2>
                   <p style={{fontFamily: 'Poppins'}} className="text-gray-500" >Precision-lined anchor points prevent cracking during installation</p>
                 </div>
               </div>

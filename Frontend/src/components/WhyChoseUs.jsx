@@ -38,7 +38,7 @@ const WhyChoseUs = () => {
 
             <div className="space-y-8" >
                 <h2 className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
-                    data-aos="fade-left" style={{fontFamily: 'Karla'}}>
+                    data-aos="fade-left" style={{fontFamily: 'Playfair Display'}}>
                     The Contractor's Choice
                 </h2>
                 

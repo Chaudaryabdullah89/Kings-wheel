@@ -23,12 +23,12 @@ const Purpose = () => {
           <h1 className="text-4xl font-bold pb-4 md:text-center bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
               data-aos="fade-up"
               data-aos-delay="100"
-              data-aos-anchor-placement="bottom-bottom" style={{font : 'karla'}} >
+              data-aos-anchor-placement="bottom-bottom" style={{fontFamily : 'Playfair Display'}} >
             Built with Purpose, Delivered with Precision
           </h1>
           <p className="item-center md:text-center lg:w-1/2 mx-auto font-semibold text-blue-900"
              data-aos="fade-up" 
-             style={ { font : 'Poppins'}}
+             style={ { fontFamily : 'Poppins'}}
              data-aos-delay="200"
              data-aos-anchor-placement="bottom-bottom">
             You get a start-to-finish solution from people who know the trade
@@ -57,10 +57,10 @@ const Purpose = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{font : 'karla'}} >
+            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{fontFamily : 'Playfair Display'}} >
               Manufacturing & Supply
             </h3>
-            <p className="text-center font-semibold text-blue-900" style={{font : 'Poppins'}}>
+            <p className="text-center font-semibold text-blue-900" style={{fontFamily : 'Poppins'}}>
               High-quality concrete wheel stops
             </p>
           </div>
@@ -83,10 +83,10 @@ const Purpose = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{font : 'karla'}} >
+            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{fontFamily : 'Playfair Display'}} >
               Bulk Orders & Pricing
             </h3>
-            <p className="text-center font-semibold text-blue-900" style={{font : 'Poppins'}}>
+            <p className="text-center font-semibold text-blue-900" style={{fontFamily : 'Poppins'}}>
               Wholesale solutions for contractors & developers
             </p>
           </div>
@@ -109,10 +109,10 @@ const Purpose = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{font : 'karla'}} >
+            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{fontFamily : 'Playfair Display'}} >
               Full-Service Delivery
             </h3>
-            <p className="text-center font-semibold text-blue-900" style={{font : 'Poppins'}}>
+            <p className="text-center font-semibold text-blue-900" style={{fontFamily : 'Poppins'}}>
               Including on-site installation
             </p>
           </div>
@@ -135,10 +135,10 @@ const Purpose = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{font : 'karla'}} >
+            <h3 className="text-center pt-2 font-bold text-yellow-500" style={{fontFamily : 'Playfair Display'}} >
               Site Assessments
             </h3>
-            <p className="text-center font-semibold text-blue-900" style={{font : 'Poppins'}}>
+            <p className="text-center font-semibold text-blue-900" style={{fontFamily : 'Poppins'}}>
               New or replacement projects
             </p>
           </div>
@@ -148,7 +148,7 @@ const Purpose = () => {
         <div className="inline-flex flex-col md:flex-row gap-5 md:gap-0 items-center bg-white px-8 py-4 rounded-full shadow-lg"
              data-aos="zoom-in"
              data-aos-anchor-placement="bottom-bottom">
-          <span className="text-slate-700 mr-4 font-semibold text-blue-900" style={{font : 'Poppins'}}>
+          <span className="text-slate-700 mr-4 font-semibold text-blue-900" style={{fontFamily   : 'Poppins'}}>
             🚀 Ready to start your project?
           </span>
           <button className="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-colors transition-all duration-300">

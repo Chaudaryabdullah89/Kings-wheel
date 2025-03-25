@@ -19,10 +19,10 @@ const ServicesProvided = () => {
     <div className='bg-gray-900 py-8' >
       <div className='max-w-7xl my-24 mx-auto px-4 md:px-8 gap-24 lg:px-16'>
         <div className='lg:text-center ml-4 lg:ml-0 mb-16' data-aos="fade-down" >
-            <h2 className='text-4xl lg:text-5xl lg:mx-auto font-bold lg:text-center mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent' style={{font : 'karla'}}>
+            <h2  className='text-4xl lg:text-5xl lg:mx-auto font-bold lg:text-center mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent' style={{fontFamily : 'Playfair Display'}}>
             Serving DFW With
             Industrial Strength Solutions            </h2>
-            <p className='text-gray-300 font-semibold text-lg' style={{font : 'Poppins'}}>
+            <p className='text-gray-300 font-semibold text-lg' style={{fontFamily : 'Poppins'}}>
             Precision installations for professionals who demand lasting quality and safety            </p>
         </div>
         <div className='grid lg:grid-cols-2 gap-10'>
@@ -30,8 +30,8 @@ const ServicesProvided = () => {
                 <img src={image} alt="service-1"  className='w-full item-center center absolute top-0 left-0 h-full object-cover rounded-xl inset-0 hover:scale-105 transition duration-700 ' />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex items-end">
                   <div className="text-white" data-aos="fade-up" data-aos-delay="200">
-                    <h3 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2" style={{font : 'karla'}}>General Contractors & Subcontractors</h3>
-                    <p className="text-gray-300 font-semibold text" style={{font : 'Poppins'}}>Compliant installations for commercial projects</p>
+                    <h3 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2" style={{fontFamily : 'Playfair Display'}}>General Contractors & Subcontractors</h3>
+                      <p className="text-gray-300 font-semibold text" style={{fontFamily : 'Poppins'}}>Compliant installations for commercial projects</p>
                   </div>
                 </div>
             </div>
@@ -39,9 +39,9 @@ const ServicesProvided = () => {
                 <img src={image2} alt="service-2" className='w-full item-center center bg-center absolute top-0 left-0 h-full object-cover rounded-lg inset-0 hover:scale-105 transition duration-700 ' />    
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex items-end">
                   <div className="text-white" data-aos="fade-up" data-aos-delay="200">
-                    <h3 className="text-3xl font-bold mb-2 text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" style={{font : 'karla'}}>Parking Lot Maintenance Crews
+                    <h3 className="text-3xl font-bold mb-2 text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" style={{fontFamily : 'Playfair Display'}}>Parking Lot Maintenance Crews
                     </h3>
-                    <p className="text-gray-300 font-semibold text" style={{font : 'Poppins'}}  >Parking solutions for retail & residential complexes</p>
+                    <p className="text-gray-300 font-semibold text" style={{fontFamily : 'Poppins'}}  >Parking solutions for retail & residential complexes</p>
                   </div>
                 </div>
             </div>
@@ -51,10 +51,10 @@ const ServicesProvided = () => {
           <img src={image3} alt="" className='w-full h-full rounded-lg object-cover absolute top-0 left-0 overflow-hidden rounded-xl hover:scale-105 transition duration-700' />
           <div className='absolute bottom-0 inset-0 w-full h-full bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex flex-col flex-end'> 
             <div className='flex flex-col absolute bottom-0 left-0 right-0 p-8' data-aos="fade-up" data-aos-delay="200">
-              <h3 className='text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent' style={{font : 'karla'}}>
+              <h3 className='text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent' style={{fontFamily : 'Playfair Display'}}>
                 Commercial & Industrial Property Owners
               </h3>
-              <p className='text-gray-300 font-semibold text' style={{font : 'Poppins'}}  >
+              <p className='text-gray-300 font-semibold text' style={{fontFamily : 'Poppins'}}  >
                 Parking solutions for retail & residential complexes
               </p>
               <div className="flex gap-4 mt-5" data-aos="fade-left" data-aos-delay="400">
