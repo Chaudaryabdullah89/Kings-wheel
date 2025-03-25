@@ -1,7 +1,6 @@
-# King Wheel Stops - Professional Website
+# King Wheel Stops 
 
-![King Wheel Stops Logo]((https://cdn-icons-png.flaticon.com/512/199/199060.png))  
-*A professional website for King Wheel Stops, showcasing premium concrete wheel stop products and services.*
+
 
 ## 🚀 Project Overview
 This is the official website for King Wheel Stops, 
