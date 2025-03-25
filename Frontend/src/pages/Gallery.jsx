@@ -1,5 +1,5 @@
 import React from 'react'
-import { Globalhero } from '../components/Globalhero'
+import Globalhero from '../components/Globalhero'
 const Gallery = () => {
   return (
     <div>
