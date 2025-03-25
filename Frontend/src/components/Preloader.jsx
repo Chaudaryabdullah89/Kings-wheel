@@ -50,7 +50,7 @@ const Preloader = () => {
   if (!loading) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
       <div className="w-full max-w-md p-8">
         {/* Logo Container */}
         <div className="flex justify-center mb-8">
