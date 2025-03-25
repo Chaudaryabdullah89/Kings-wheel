@@ -57,29 +57,34 @@ const Preloader = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
-      <div className="w-full max-w-md p-8">
-        {/* Logo Container */}
-        <div className="flex justify-center mb-8">
-          <div className="">
-            <img src="https://cdn-icons-png.flaticon.com/512/199/199060.png" alt=""  className='w-16 h-16' />
+      <div className="w-full max-w-md p-8 text-center">
+        {/* Logo Container with subtle animation */}
+        <div className="flex justify-center mb-10">
+          <div className="transform hover:scale-105 transition-transform duration-300">
+            <img 
+              src="https://cdn-icons-png.flaticon.com/512/199/199060.png" 
+              alt=""  
+              className="w-24 h-24 animate-bounce"
+              style={{ animationDuration: '2s' }}
+            />
           </div>
         </div>
 
-        {/* Brand Name */}
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        {/* Brand Name with gradient */}
+        <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">
           King Wheel Stop
         </h2>
 
-        {/* Progress Bar */}
-        <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+        {/* Clean Progress Bar */}
+        <div className="relative h-2 bg-gray-100 rounded-full overflow-hidden mx-auto max-w-sm">
           <div 
-            className="absolute top-0 left-0 h-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-300 ease-out"
+            className="absolute top-0 left-0 h-full bg-yellow-500 transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
 
-        {/* Loading Text */}
-        <p className="text-center text-gray-600 mt-4">
+        {/* Simple Loading Text */}
+        <p className="text-gray-600 mt-4 text-lg font-medium">
           Loading... {progress}%
         </p>
       </div>
