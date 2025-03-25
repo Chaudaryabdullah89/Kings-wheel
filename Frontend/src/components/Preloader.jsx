@@ -2,9 +2,6 @@
 // The preloader code is taken from the internet and modified by me 
 // I am not the original author of the code
 
-
-
-
 import React, { useEffect, useState } from 'react';
 
 const Preloader = () => {
@@ -27,8 +24,11 @@ const Preloader = () => {
       const increment = 5;
       const interval = setInterval(() => {
         setProgress(prev => {
-          const next = prev + increment;
-          return next < 90 ? next : 90; // Cap at 90% until fully loaded
+          if (prev >= 100) {
+            clearInterval(interval);
+            return 100;
+          }
+          return prev + increment;
         });
       }, 100);
 
@@ -40,8 +40,14 @@ const Preloader = () => {
     // Listen for window load event
     window.addEventListener('load', handleLoad);
 
+    // Fallback to ensure preloader doesn't get stuck
+    const fallbackTimer = setTimeout(() => {
+      handleLoad();
+    }, 5000); // Force complete after 5 seconds
+
     return () => {
       clearInterval(interval);
+      clearTimeout(fallbackTimer);
       window.removeEventListener('load', handleLoad);
     };
   }, []);
