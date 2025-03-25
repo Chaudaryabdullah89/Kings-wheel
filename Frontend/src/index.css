@@ -12,7 +12,7 @@
 .roboto{
   font-family: 'Roboto', sans-serif;
 }
-.heading{  font-family: "Winky Sans", sans-serif;}
+
 .gradient-border {
   position: relative;
   background: linear-gradient(45deg, #f59e0b, #f97316);
@@ -122,4 +122,7 @@ img {
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+.active{
+  background-color: #f97316;
 }

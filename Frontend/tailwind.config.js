@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'karla': ['Karla', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         'fade-in': 'fadeIn 0.5s ease-in forwards',

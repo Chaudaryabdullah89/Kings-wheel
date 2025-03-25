@@ -21,57 +21,79 @@ const Navbar = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <nav className="navbar backdrop-blur-sm border-b border-gray-100 py-5 flex justify-between gap-0 items-center fixed top-0 left-0 w-full md:w-full z-10">
-        <div className="nav-brand flex items-center gap-4 mx-12 lg:mx-16 flex-row" data-aos="fade-right">
-          <Link to="/" className="flex items-center gap-2">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/199/199060.png"
-              alt="Logo"
-              className="w-12 h-12 "
-            />
-          </Link>
-          <h2 className="text-2xl font-bold text-blue-900 pb-1 hidden lg:block">
-            King Wheel Stop
-          </h2>
-        </div>
-        <div className="hidden sm:flex" data-aos="fade-down">
-          <ul className="nav-links roboto flex items-center gap-10 mx-5 xl:mx-24 lg:mx-12">
-            <li data-aos="fade-down" data-aos-delay="100">
-              <Link className="text-blue-900 font-semibold" to="/">
-                Home
+      <nav className=" backdrop-blur-lg shadow-md fixed top-0 left-0 w-full z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo and Brand */}
+            <div className="flex items-center " data-aos="fade-right">
+              <Link to="/" className="flex items-center space-x-3">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/199/199060.png"
+                  alt="Logo"
+                  className="w-10 h-10 transition-transform duration-300 hover:scale-110"
+                />
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent hidden lg:block">
+                  King Wheel Stop
+                </h2>
               </Link>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="200">
-              <Link className="text-blue-900 font-semibold" to="/about">
-                About
-              </Link>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="300">
-              <Link className="text-blue-900 font-semibold" to="/services">
-                Services
-              </Link>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="400">
-              <Link className="text-blue-900 font-semibold" to="/contact">
-                Industries Servied
-              </Link>
-            </li>
-            <li data-aos="fade-down" data-aos-delay="500">
-              <Link className="text-blue-900 font-semibold" to="/contact">
-                <Buttonnav value=" Contact Now  " />
-              </Link>
-            </li>
-          </ul>
-        </div>
-       
-            
-            <div className="sm:hidden  lg:mx-16 ">
-              <i
-                onClick={() => setMenu(!menu)}
-                className="fa-solid fa-bars cursor-pointer text-yellow-500 text-2xl"
-              ></i>
             </div>
-         
+
+            {/* Desktop Navigation */}
+            <div className="hidden sm:block" style={{fontFamily: 'Karla'}} data-aos="fade-down">
+              <div className="flex items-center space-x-8">
+                <Link 
+                  to="/"
+                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
+                  data-aos="fade-down" 
+                  data-aos-delay="100"
+                >
+                  Home
+                </Link>
+                <Link 
+                  to="/about"
+                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
+                  data-aos="fade-down"
+                  data-aos-delay="200"
+                >
+                  About
+                </Link>
+                <Link 
+                  to="/services"
+                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                >
+                  Services
+                </Link>
+                <Link 
+                  to="/contact"
+                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                >
+                  Industries Served
+                </Link>
+                <Link 
+                  to="/contact"
+                  data-aos="fade-down"
+                  data-aos-delay="500"
+                >
+         <Buttonnav value={"Contact Us"}  />
+                </Link>
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="sm:hidden">
+              <button
+                onClick={() => setMenu(!menu)}
+                className="inline-flex items-center justify-center p-2 rounded-md text-blue-900 hover:text-blue-800 hover:bg-blue-100 transition-colors duration-200"
+              >
+                <i className="fa-solid fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </nav>
       {/* mobile nav bar */}
       <div

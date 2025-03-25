@@ -11,19 +11,19 @@ const heroImage = {
 
 const Hero = memo(() => {
   return (
-    <div className='my-36 max-w-[1400px] mx-auto px-4 md:px-8 gap-5 lg:px-16'>
+    <div className='my-10 md:my-36 max-w-[1400px] mx-auto px-4 md:px-8 gap-5 lg:px-16'>
       <div className="hero-container flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="hero-content w-full lg:w-[50%]">
             <div className="space-y-4">
-              <span className="text-yellow-500 font-semibold tracking-wider uppercase" 
-                    data-aos="fade-down" 
-                    data-aos-anchor-placement="top-bottom">
+              <span className="text-yellow-500 font-bold tracking-wider uppercase" 
+                    data-aos="fade-down"  
+                    data-aos-anchor-placement="top-bottom" style={{fontFamily: 'Karla'}}>
                 Welcome to King Wheel Stop
               </span>
               
               <h1 className='text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent heading leading-tight'
                   data-aos="fade-right"
-                  data-aos-anchor-placement="top-bottom">
+                  data-aos-anchor-placement="top-bottom " style={{fontFamily: 'Playfair Display'}} >
                 Precision Built. Contractor Trusted. Texas Tough.
               </h1>
              
@@ -31,13 +31,13 @@ const Hero = memo(() => {
                    data-aos="fade-right"
                    data-aos-anchor-placement="top-bottom">
                 <hr className='w-20 border-2 border-orange-400'/>
-                <span className="text-gray-500">Excellence in Every Stop</span>
+                <span className="text-blue-900 font-semibold " style={{fontFamily: 'Karla'}}>Excellence in Every Stop</span>
               </div>
 
-              <p className='text-lg text-gray-600 leading-relaxed font-light'
+              <p className='text-lg text-blue-900  leading-relaxed '
                  data-aos="fade-up"
-                 data-aos-anchor-placement="top-bottom">
-                Concrete wheel stops engineered with <span className="font-semibold">4000 PSI strength</span>, reinforced with #4 rebar, and finished with PVC-lined holes for a clean, damage-free install—every time. Built to last, designed to protect.
+                 data-aos-anchor-placement="top-bottom"  style={{fontFamily: 'Poppins'}} >
+                Concrete wheel stops engineered with <span className="font-semibold  text-yellow-500 ">4000 PSI strength</span>, reinforced with #4 rebar, and finished with PVC-lined holes for a clean, damage-free install—every time. Built to last, designed to protect.
               </p>
             </div>
 

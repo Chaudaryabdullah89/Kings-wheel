@@ -21,7 +21,7 @@ const Reason = () => {
             <h1 
               className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
               data-aos="fade-right"
-              data-aos-anchor-placement="bottom-bottom"
+              data-aos-anchor-placement="bottom-bottom"   style={{fontFamily: 'Karla'}}
             >
               Engineered to Perform Better
             </h1>
@@ -36,8 +36,8 @@ const Reason = () => {
                   <i className="fa-solid fa-check text-white text-1xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-900">4000 PSI Concrete Strength</h2>
-                  <p>Built to withstand heavy commercial traffic and extreme weather conditions</p>
+                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Karla'}}>4000 PSI Concrete Strength</h2>
+                  <p style={{fontFamily: 'Poppins'}} className="text-gray-500" >Built to withstand heavy commercial traffic and extreme weather conditions</p>
                 </div>
               </div>
 
@@ -51,8 +51,8 @@ const Reason = () => {
                   <i className="fa-solid fa-check text-white text-1xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-900">#4 Rebar Core Reinforcement</h2>
-                  <p>Vertical and horizontal steel reinforcement for maximum load resistance</p>
+                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Karla'}}>#4 Rebar Core Reinforcement</h2>
+                  <p style={{fontFamily: 'Poppins'}} className="text-gray-500" >Vertical and horizontal steel reinforcement for maximum load resistance</p>
                 </div>
               </div>
 
@@ -66,8 +66,8 @@ const Reason = () => {
                   <i className="fa-solid fa-check text-white text-1xl"></i>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-900">PVC-Lined Install Holes</h2>
-                  <p>Precision-lined anchor points prevent cracking during installation</p>
+                  <h2 className="text-2xl font-bold text-blue-900" style={{fontFamily: 'Karla'}}>PVC-Lined Install Holes</h2>
+                  <p style={{fontFamily: 'Poppins'}} className="text-gray-500" >Precision-lined anchor points prevent cracking during installation</p>
                 </div>
               </div>
               <div 
@@ -76,7 +76,7 @@ const Reason = () => {
                 data-aos-delay="400"
                 data-aos-anchor-placement="bottom-bottom"
               >
-                <p>
+                <p style={{fontFamily: 'Karla'}}>
                   Whether you're managing large job sites or upgrading existing
                   lots, experience faster installations and lasting results with
                   our contractor-approved solutions.
