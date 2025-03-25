@@ -168,3 +168,28 @@ html, body {
     visibility: visible !important;
   }
 }
+
+/* CSS for smooth transitions */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .fade-in {
+    transition: opacity 0.3s ease-in-out; /* Faster transition on mobile */
+  }
+}
+
+.scale-up {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scale-up.visible {
+  transform: scale(1);
+}

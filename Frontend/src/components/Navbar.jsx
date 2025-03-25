@@ -21,11 +21,11 @@ const Navbar = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <nav className=" backdrop-blur-lg shadow-md fixed top-0 left-0 w-full z-10">
+      <nav className="backdrop-blur-lg shadow-md fixed top-0 left-0 w-full z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo and Brand */}
-            <div className="flex items-center " data-aos="fade-right">
+            <div className="flex items-center" data-aos="fade-right">
               <Link to="/" className="flex items-center space-x-3">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/199/199060.png"
@@ -39,54 +39,58 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden sm:block" style={{fontFamily: 'Karla'}} data-aos="fade-down">
-              <div className="flex items-center space-x-8">
-                <Link 
+            <div className="hidden sm:block" style={{fontFamily: 'Karla'}}>
+              <div className="flex items-center space-x-6">
+                <NavLink 
                   to="/"
-                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
-                  data-aos="fade-down" 
-                  data-aos-delay="100"
+                  className={({ isActive }) =>
+                    `relative px-3 py-2 text-blue-900 font-bold transition-all duration-300
+                    ${isActive ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-500' : 'hover:text-yellow-500'}`
+                  }
                 >
                   Home
-                </Link>
-                <Link 
+                </NavLink>
+                <NavLink 
                   to="/about"
-                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
-                  data-aos="fade-down"
-                  data-aos-delay="200"
+                  className={({ isActive }) =>
+                    `relative px-3 py-2 text-blue-900 font-bold transition-all duration-300
+                    ${isActive ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-500' : 'hover:text-yellow-500'}`
+                  }
                 >
                   About
-                </Link>
-                <Link 
+                </NavLink>
+                <NavLink 
                   to="/services"
-                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
-                  data-aos="fade-down"
-                  data-aos-delay="300"
+                  className={({ isActive }) =>
+                    `relative px-3 py-2 text-blue-900 font-bold transition-all duration-300
+                    ${isActive ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-500' : 'hover:text-yellow-500'}`
+                  }
                 >
                   Services
-                </Link>
-                <Link 
+                </NavLink>
+                <NavLink 
                   to="/industriessurvied"
-                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
-                  data-aos="fade-down"
-                  data-aos-delay="400"
+                  className={({ isActive }) =>
+                    `relative px-3 py-2 text-blue-900 font-bold transition-all duration-300
+                    ${isActive ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-500' : 'hover:text-yellow-500'}`
+                  }
                 >
-                  Industries Served
-                </Link>
-                <Link 
+                  Industries
+                </NavLink>
+                <NavLink 
                   to="/gallery"
-                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
-                  data-aos="fade-down"
-                  data-aos-delay="500"
+                  className={({ isActive }) =>
+                    `relative px-3 py-2 text-blue-900 font-bold transition-all duration-300
+                    ${isActive ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-yellow-500' : 'hover:text-yellow-500'}`
+                  }
                 >
                   Gallery
-                </Link>
+                </NavLink>
                 <Link 
                   to="/contact"
-                  data-aos="fade-down"
-                  data-aos-delay="500"
+                  className=""
                 >
-         <Buttonnav value={"Contact Us"}  />
+                  <Buttonnav value={"Contact Now"} />
                 </Link>
               </div>
             </div>
@@ -177,7 +181,7 @@ const Navbar = () => {
                 onClick={() => setMenu(false)}
               >
                 <i className="fa-solid fa-phone w-5 text-yellow-500 "></i>
-                Contact Now
+                Contact 
               </Link>
             </li>
           </ul>

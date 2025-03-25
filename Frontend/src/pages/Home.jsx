@@ -12,7 +12,7 @@ import KingDiffrence from '../components/KingDiffrence'
   const Home = () => {
   return (
     <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <Hero />
         <WhyChoseUs />
         <Reason />
