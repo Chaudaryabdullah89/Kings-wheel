@@ -16,7 +16,7 @@ const Globalhero = ({heading, paragraph}) => {
     {/* Content */}
     <div className="relative max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 w-full">
       <div className="text-center" data-aos="fade-up">
-        <h1  style={{fontFamily: 'Playfair Display'}} className=" text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 mb-6">
+        <h1  style={{fontFamily: 'Playfair Display'}} className=" text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-6">
         {heading}
         </h1>
         <p className="font-poppins text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">

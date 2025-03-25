@@ -9,7 +9,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Footer from './components/footer'
 import Preloader from './components/Preloader'
-
+import Industriessurvied from './pages/Industriessurvied.jsx'
+import Gallery from './pages/Gallery'
 const App = () => {
   useEffect(() => {
     const initAOS = () => {
@@ -38,6 +39,9 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/industriessurvied" element={<Industriessurvied />} />
+            <Route path="/gallery" element={<Gallery />} />
+
           </Routes>
         </main>
         <Footer />

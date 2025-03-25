@@ -4,7 +4,7 @@ import Button from "./Button";
 import Buttonnav from "./Buttonnav";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+  
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
@@ -66,12 +66,20 @@ const Navbar = () => {
                   Services
                 </Link>
                 <Link 
-                  to="/contact"
+                  to="/industriessurvied"
                   className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
                   data-aos="fade-down"
                   data-aos-delay="400"
                 >
                   Industries Served
+                </Link>
+                <Link 
+                  to="/gallery"
+                  className="text-blue-900 hover:text-yellow-500 transition-all duration-300 font-bold transition-colors duration-200"
+                  data-aos="fade-down"
+                  data-aos-delay="500"
+                >
+                  Gallery
                 </Link>
                 <Link 
                   to="/contact"
