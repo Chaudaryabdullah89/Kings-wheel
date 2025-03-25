@@ -126,3 +126,45 @@ img {
 .active{
   background-color: #f97316;
 }
+
+/* Prevent layout shifts during animations */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Force hardware acceleration and prevent visual glitches */
+[data-aos] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent horizontal scrollbar during animations */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Add this to elements that are causing width issues */
+[data-aos] {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  visibility: hidden;
+}
+
+[data-aos].aos-animate {
+  visibility: visible;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}

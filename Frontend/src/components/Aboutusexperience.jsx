@@ -5,11 +5,11 @@ const Aboutusexperience = () => {
     <div>
       <div className='maz-w-7xl mx-auto my-32 bg-gray-200 py-8'>
         <div className='mx-5 md:mx-auto mb-12 mx-auto max-w-7xl'>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight mx-5 md:mx-0" data-aos="fade-up">
             <span className="block mb-4 text-blue-900" style={{fontFamily: 'Play fair'}}>A Product Born</span>
             <span style={{fontFamily: 'Play fair'}} className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 transform -skew-x-12">From Experience</span>
           </h2>
-          <p className='text-blue-900 w-1/2 pt-5' style={{fontFamily: 'Poppins'}} data-aos="fade-up">We built King Wheel Stops because we were tired of poor quality. Our custom-designed concrete wheel stops are engineered with</p>
+          <p className='text-blue-900 w-full md:w-1/2 pt-5 mx-5 md:mx-0' style={{fontFamily: 'Poppins'}} data-aos="fade-up">We built King Wheel Stops because we were tired of poor quality. Our custom-designed concrete wheel stops are engineered with</p>
         </div>
         <div>
           <div className='grid grid-cols-1 mx-5 md:mx-auto max-w-7xl md:grid-cols-2 gap-24'>
