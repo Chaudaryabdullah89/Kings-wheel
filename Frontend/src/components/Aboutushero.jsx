@@ -1,5 +1,5 @@
 import React from 'react';
-import service2 from '../assets/imagecompressor/service-2-min.jpg';
+import heroimg from '../assets/imagecompressor/hero img-min.jpg';
 const Aboutushero = () => {
   return (
    <div>
@@ -7,7 +7,7 @@ const Aboutushero = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img 
-            src="/src/assets/imagecompressor/hero img-min.jpg" 
+            src={heroimg} 
             alt="About Us Background"
             className="w-full h-full object-cover"
           />
