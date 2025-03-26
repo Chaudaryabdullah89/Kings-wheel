@@ -4,7 +4,7 @@ const ParkingLotServices = () => {
   return (
     <div className='bg-blue-50 py-10'>
       <div className='max-w-7xl mx-auto bg-blue-50 px-4 sm:px-6 lg:px-8'>
-        <div className='flex flex-col items-center justify-center'>
+        <div className='flex flex-col  justify-center'>
             <h1 className='text-3xl md:text-4xl font-bold  bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent' style={{fontFamily : 'Playfair Display'}} data-aos="fade-down">
             We Understand What You're Up Against
             </h1>
