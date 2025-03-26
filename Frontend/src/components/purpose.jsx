@@ -145,7 +145,7 @@ const Purpose = () => {
         </div>
       </div>
       <div className="mt-16 text-center">
-        <div className="inline-flex flex-col md:flex-row gap-5 md:gap-0 items-center bg-white px-8 py-4 rounded-full shadow-lg"
+        <div className="inline-flex flex-col md:flex-row w-fit gap-5 md:gap-0 items-center bg-white px-8 py-4 rounded-full shadow-lg"
              data-aos="zoom-in"
              data-aos-anchor-placement="bottom-bottom">
           <span className="text-slate-700 mr-4 font-semibold text-blue-900" style={{fontFamily   : 'Poppins'}}>
