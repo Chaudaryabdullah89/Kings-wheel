@@ -2,11 +2,19 @@ import React from 'react';
 
 const LoadingSpinner = () => {
   return (
-    <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-yellow-400 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" 
-         role="status">
-      <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-        Loading...
-      </span>
+    <div className="fixed bottom-10 right-10 z-50">
+      <button 
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }}
+        className="bg-yellow-500 text-white w-14 h-14 rounded-full shadow-lg transition-transform transform hover:scale-110 flex items-center justify-center"
+        aria-label="Scroll to top"
+      >
+        <i className="fas fa-chevron-up text-2xl"></i>
+      </button>
     </div>
   );
 };

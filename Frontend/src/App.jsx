@@ -11,6 +11,7 @@ import Footer from './components/footer'
 import Preloader from './components/Preloader'
 import Industriessurvied from './pages/Industriessurvied.jsx'
 import Gallery from './pages/Gallery'
+import LoadingSpinner from './components/LoadingSpinner'
 const App = () => {
   useEffect(() => {
     const initAOS = () => {
@@ -44,6 +45,7 @@ const App = () => {
 
           </Routes>
         </main>
+        <LoadingSpinner />
         <Footer />
       </div>
     </>
